@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-navba',
-  templateUrl: './navba.component.html',
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
   styles: [
   ]
 })
