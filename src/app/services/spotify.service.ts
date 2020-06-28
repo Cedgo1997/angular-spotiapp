@@ -36,6 +36,8 @@ export class SpotifyService {
       {
         headers,
       }
-    );
+    ).pipe( map(data => {
+      return data['artists'].items;
+    }) )
   }
 }
