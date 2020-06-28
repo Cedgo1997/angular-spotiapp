@@ -3,7 +3,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { map } from 'rxjs/operators';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -11,7 +10,6 @@ export class SpotifyService {
   constructor(private http: HttpClient) {}
 
   getNewReleases() {
-
     // HttpHeaders for set authorization for APIs:
 
     const headers = new HttpHeaders({
@@ -19,10 +17,9 @@ export class SpotifyService {
         'Bearer BQBOeWI_rcOTmoDiwnFWvsfa8IDU7GGxALKqOithsMggw0aCrMP5LRs26ndcykt4ymp-bB0EDgMub0h4ANk',
     });
 
-    return this.http.get('https://api.spotify.com/v1/browse/new-releases', {headers})
-    .pipe( map(data => {
-      return data['albums'].items;
-    }) )
+    return this.http
+      .get('https://api.spotify.com/v1/browse/new-releases', { headers })
+      .pipe(map((data) => data['albums'].items));
   }
 
   getArtist(term: string) {
@@ -31,13 +28,8 @@ export class SpotifyService {
         'Bearer BQBOeWI_rcOTmoDiwnFWvsfa8IDU7GGxALKqOithsMggw0aCrMP5LRs26ndcykt4ymp-bB0EDgMub0h4ANk',
     });
 
-    return this.http.get(
-      `https://api.spotify.com/v1/search?q=${ term }&type=artist&limit=15`,
-      {
-        headers,
-      }
-    ).pipe( map(data => {
-      return data['artists'].items;
-    }) )
+    return this.http
+      .get(`https://api.spotify.com/v1/search?q=${term}&type=artist&limit=15`, { headers })
+      .pipe(map((data) => data['artists'].items));
   }
 }
