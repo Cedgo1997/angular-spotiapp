@@ -18,6 +18,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http'; //For  maki
 //Services
 
 import { SpotifyService } from './services/spotify.service';
+import { NoimagePipe } from './pipes/noimage.pipe';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { SpotifyService } from './services/spotify.service';
     HomeComponent,
     SearchComponent,
     ArtistComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe
   ],
   imports: [
     BrowserModule,
