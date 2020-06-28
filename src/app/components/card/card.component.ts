@@ -6,13 +6,11 @@ import { Component, OnInit, Input } from '@angular/core';
   styles: [
   ]
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
 
   @Input() items: any[]; 
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
 
 }
