@@ -11,6 +11,12 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
+// Import Http
+
+import { HttpClientModule, HttpClient } from '@angular/common/http'; //For  making requests
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +27,7 @@ import { ROUTES } from './app.routes';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(ROUTES, {useHash: true})
   ],
   providers: [],
