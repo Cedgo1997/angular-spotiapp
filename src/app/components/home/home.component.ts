@@ -4,21 +4,18 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styles: [
-  ]
+  styles: [],
 })
 export class HomeComponent {
-
-  newSongs:any[] =[];
+  newSongs: any[] = [];
+  loading: boolean;
 
   constructor(private _spotify: SpotifyService) {
-
-    this._spotify.getNewReleases().subscribe((data:any) => {
+    this.loading = true;
+    this._spotify.getNewReleases().subscribe((data: any) => {
       console.log(data);
       this.newSongs = data;
+      this.loading = false;
     });
-
-
-   }
-
+  }
 }
