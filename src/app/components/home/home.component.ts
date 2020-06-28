@@ -7,14 +7,11 @@ import { SpotifyService } from 'src/app/services/spotify.service';
   styles: [
   ]
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
   constructor(private _spotify: SpotifyService) {
 
-    
+    this._spotify.getNewReleases();
    }
-
-  ngOnInit(): void {
-  }
 
 }
