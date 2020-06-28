@@ -20,6 +20,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http'; //For  maki
 import { SpotifyService } from './services/spotify.service';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { CardComponent } from './components/card/card.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { CardComponent } from './components/card/card.component';
     ArtistComponent,
     NavbarComponent,
     NoimagePipe,
-    CardComponent
+    CardComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,
