@@ -15,6 +15,9 @@ import { ROUTES } from './app.routes';
 
 import { HttpClientModule, HttpClient } from '@angular/common/http'; //For  making requests
 
+//Services
+
+import { SpotifyService } from './services/spotify.service';
 
 
 @NgModule({
@@ -30,7 +33,9 @@ import { HttpClientModule, HttpClient } from '@angular/common/http'; //For  maki
     HttpClientModule,
     RouterModule.forRoot(ROUTES, {useHash: true})
   ],
-  providers: [],
+  providers: [
+    SpotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
