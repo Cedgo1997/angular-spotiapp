@@ -19,6 +19,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http'; //For  maki
 
 import { SpotifyService } from './services/spotify.service';
 import { NoimagePipe } from './pipes/noimage.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 import { CardComponent } from './components/card/card.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 
@@ -31,6 +32,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     ArtistComponent,
     NavbarComponent,
     NoimagePipe,
+    DomseguroPipe,
     CardComponent,
     LoadingComponent
   ],
