@@ -19,3 +19,28 @@
         </button>
     </div>
 </div>
+
+<div class="row mt-5">
+    <div class="col">
+        <table class="table" >
+            <thead>
+                <tr>
+                    <th>Picture</th>
+                    <th>Album</th>
+                    <th>Song</th>
+                    <th>Preview</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let track of topTracks">
+                    <td> <img class="img-thumb" [src]="track.album.images | noimage" alt=""> </td>
+                    <td> {{ track.album.name }} </td>
+                    <td> {{ track.name }} </td>
+                    <td>
+                        <audio [src]="track.preview_url" controls></audio>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
